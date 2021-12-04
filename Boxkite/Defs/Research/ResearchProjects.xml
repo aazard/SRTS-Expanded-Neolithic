@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchProjectDef>
+	<tab>SRTSE</tab>
+    <defName>Wind_Generated_Lift</defName>
+    <label>wind generated lift</label>
+    <description>Using lift, gravity, and drag to achive basic flight. A kite flies because the lifting force of the wind overcomes both the downward pull of gravity and air resistance to the forward motion of the kite called drag.</description>
+    <baseCost></baseCost>
+	<techLevel>Neolithic</techLevel>
+    <researchViewX>2</researchViewX>
+    <researchViewY>2</researchViewY>
+    <heldByFactionCategoryTags>
+      <li>Tribe</li>
+	  <li>Outlander</li>
+	  <li>Pirate</li>
+	  <li>Empire</li>
+    </heldByFactionCategoryTags>
+  </ResearchProjectDef>
+</Defs>

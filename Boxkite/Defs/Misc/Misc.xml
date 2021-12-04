@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- BoxKite -->
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>NSRTSBoxKite_Incoming</defName>
+    <label>box kite incoming</label>
+    <thingClass>SRTS.SRTSIncoming</thingClass>
+    <graphicData>
+      <texPath>BoxKite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(4,4)</shadowSize>
+      <anticipationSound>DropPod_Fall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>NSRTSBoxKite_Leaving</defName>
+    <label>box kite leaving</label>
+    <thingClass>SRTS.SRTSLeaving</thingClass>
+    <graphicData>
+      <texPath>BoxKite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>Accelerate</movementType>
+      <reversed>true</reversed>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(4,4)</shadowSize>
+      <anticipationSound>Sound_Launch</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange><min>-40</min><max>-15</max></ticksToImpactRange>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>NSRTSBoxKite_Active</defName>
+    <label>box kite active</label>
+    <category>Item</category>
+    <thingClass>ActiveDropPod</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>BoxKite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>true</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>
+</Defs>

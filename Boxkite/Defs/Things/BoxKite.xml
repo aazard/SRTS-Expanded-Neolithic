@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- BoxKite -->
+
+  <ThingDef ParentName="NECShipBase">
+    <defName>NSRTSBoxKite</defName>
+    <label>box kite</label>
+    <description>It is a box kite. Uses wind pridictions as a low tech unmanned drop pod and, if piloted, slightly better than walking. 100kg capacity, total.
+
+Passenger cap: One
+Build: Neolithic DropPod
+Speed: Awful - Fuel cap: 20
+Range: 20 World Tiles
+Cargo cap: 100kg</description>
+    <graphicData>
+      <texPath>BoxKite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4,4)</drawSize>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1100</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Mass>5</Mass>
+      <Beauty>1</Beauty>
+    </statBases>
+    <costList>
+      <WoodLog>20</WoodLog>
+      <Cloth>50</Cloth>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Transporter">
+        <restEffectiveness>0.50</restEffectiveness>
+        <massCapacity>100</massCapacity>
+      </li>
+      <li Class="SRTS.CompProperties_LaunchableSRTS">
+        <travelSpeed>20</travelSpeed>
+        <fuelPerTile>1</fuelPerTile>
+        <minPassengers>0</minPassengers>
+        <maxPassengers>1</maxPassengers>
+      	<spaceFaring>false</spaceFaring>
+      	<shuttleBayLanding>false</shuttleBayLanding>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>20</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>20</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <initialFuelPercent>0.25</initialFuelPercent>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+      </li>
+	  </comps>
+    <researchPrerequisites>
+	<li>Wind_Generated_Lift</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <uiIconScale>0.75</uiIconScale>
+    <killedLeavings>
+      <WoodLog>4</WoodLog>
+    </killedLeavings>
+  </ThingDef>
+
+</Defs>
